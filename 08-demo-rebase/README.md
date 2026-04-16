@@ -49,3 +49,5 @@ Paso 5: Verificar que todo quedó bien
 bashgit status
 git log --oneline -5
 git remote -v
+
+Solucionado. 
