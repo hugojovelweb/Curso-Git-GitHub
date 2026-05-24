@@ -1,0 +1,4 @@
+Documento práctico para evitar errores de Git al trabajar en diferentes equipos y manejar correctamente proyectos con GitHub.
+1. Error más común
+fatal: not a git repository (or any of the parent directories): .git
+
