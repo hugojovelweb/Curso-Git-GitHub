@@ -3,4 +3,4 @@
 fatal: not a git repository (or any of the parent directories): .git
 
 # Este error significa que la carpeta donde estás trabajando NO está conectada a Git.
-
+123456
