@@ -1,8 +1,73 @@
-### Documento práctico para evitar errores de Git al trabajar en diferentes equipos y manejar correctamente proyectos con GitHub.
-- 1. Error más común
+Guía Git y GitHub para Proyectos Java
+Documento práctico para evitar errores de Git al trabajar en diferentes equipos y manejar correctamente proyectos con GitHub.
+1. Error más común
 fatal: not a git repository (or any of the parent directories): .git
 
-# Este error significa que la carpeta donde estás trabajando NO está conectada a Git.
+Este error significa que la carpeta donde estás trabajando NO está conectada a Git.
+2. Diferencia entre git clone y git pull
+git clone:
+- Se usa la primera vez que descargas un proyecto.
+- Crea la carpeta y la conexión Git automáticamente.
 
+Comando:
+git clone URL_DEL_REPOSITORIO
 
-- 2. Diferencia entre git clone y git pull
+git pull:
+- Se usa cuando YA clonaste el proyecto.
+- Solo actualiza cambios.
+3. Cómo arreglar una carpeta ya creada manualmente
+Paso 1:
+Abrir terminal dentro de la carpeta.
+
+Paso 2:
+Inicializar Git:
+git init
+
+Paso 3:
+Conectar repositorio remoto:
+git remote add origin URL_DEL_REPOSITORIO
+
+Paso 4:
+Verificar conexión:
+git remote -v
+
+Paso 5:
+Traer ramas:
+git fetch
+
+Paso 6:
+Conectarse a rama principal:
+git checkout -b main origin/main
+4. Flujo profesional recomendado
+PRIMERA VEZ EN CADA PC:
+1. Ir a carpeta de proyectos
+2. Ejecutar:
+git clone URL
+
+TRABAJO DIARIO:
+git pull
+git add .
+git commit -m "mensaje"
+git push
+5. Cómo saber si una carpeta ya es Git
+Ejecutar:
+git status
+
+Si funciona:
+✅ Ya es repositorio Git.
+
+Si aparece:
+not a git repository
+❌ No está conectado.
+6. Organización recomendada para desarrolladores
+Ejemplo:
+
+D:\Dev\
+   Java\
+   Web\
+   Clientes\
+   Bootcamp\
+
+Mantener todos los proyectos ordenados evita errores y facilita trabajar en múltiples equipos.
+REGLA DE ORO:
+Siempre usar git clone la primera vez en cada computadora. Usar git pull solo dentro de proyectos ya clonados.
